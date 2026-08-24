@@ -25,7 +25,6 @@ class EvenDigit{
     }
 
     static boolean Even(int number){
-        int numberOfDigit=numberOfDigit(number);
         return numberOfDigit(number)%2==0;
     }
 }
