@@ -7,7 +7,7 @@ class StringLinearSearch {
         System.out.print("\nEnter Element to Search : ");
         Scanner input = new Scanner(System.in);
         String element=input.nextLine();
-        System.out.println("Enement search : "+element);
+        System.out.println("Element search : "+element);
         boolean found = false;
         for (int i = 0; i < str.length(); i++) {
             if (element.charAt(0) == str.charAt(i)) {
