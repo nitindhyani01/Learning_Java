@@ -1,19 +1,18 @@
-//Binary search on ascending sorted array 
 
-class BinarySearch {
+class Ceiling {
 
     public static void main(String[] args) {
-        int[] arr = {2, 4, 6, 9, 11, 12, 14, 20, 36, 48};
-        int target = 4;
-        int ans = BS(arr, target);
+        int[] arr = {2, 3, 5, 9, 14, 16, 18};
+        int target = 15;
+        int ans = CeilingVal(arr, target);
         if (ans == -1) {
-            System.out.println("Element not found");
+            System.out.println("Out of bound value entered");
         } else {
-            System.out.println("Element is at position : " + (ans + 1));
+            System.out.println("Search Value is " + arr[ans] + " Position of element is " + (ans + 1));
         }
     }
 
-    static int BS(int[] arr, int target) {
+    static int CeilingVal(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
         while (start <= end) {
@@ -26,6 +25,9 @@ class BinarySearch {
                 return mid;
             }
         }
-        return -1;
+        if (target == arr.length) {
+            return -1;
+        }
+        return start;
     }
 }
