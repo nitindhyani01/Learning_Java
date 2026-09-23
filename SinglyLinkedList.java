@@ -7,6 +7,7 @@ public class SinglyLinkedList {
             list.insertionAtFirst(1);
             list.insertionAtLast(63);
             list.insertionAtIndex(27, 3);
+            System.out.print(list.deletefirst());
             list.display();
         }
 
@@ -70,6 +71,15 @@ public class SinglyLinkedList {
         System.out.print("END");
     }
 
+    public int deletefirst(){
+        int val = head.val;
+        head = head.next;
+        if(head == null){
+            tail = null;
+        }
+        size--;
+        return val;
+    }
     private class Node {
 
         private int val;
@@ -83,6 +93,5 @@ public class SinglyLinkedList {
             this.val = value;
             this.next = next;
         }
-
     }
 }
